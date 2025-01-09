@@ -47,14 +47,8 @@ class AffiliationChecker:
     """Analyzes author affiliations"""
     
     def __init__(self):
-        self.company_indicators: Set[str] = {
-            'inc', 'corp', 'ltd', 'llc', 'gmbh', 'co', 
-            'pharmaceuticals', 'biotech', 'therapeutics'
-        }
-        self.academic_indicators: Set[str] = {
-            'university', 'college', 'institute', 'school',
-            'hospital', 'clinic', 'medical center'
-        }
+        self.company_indicators: Set[str] = {'inc', 'corp', 'ltd', 'llc', 'gmbh', 'co', 'pharmaceuticals', 'biotech', 'therapeutics'}
+        self.academic_indicators: Set[str] = {'university', 'college', 'institute', 'school','hospital', 'clinic', 'medical center' }
 
     def is_company(self, affiliation: str) -> Optional[str]:
         """
